@@ -1,0 +1,46 @@
+clc;
+clear;
+close all;
+
+%% Input Parameters
+P_motor = 22000;              % Motor Power (Watts)
+V_system = 400;               % Grid Voltage (Volts)
+efficiency_inverter = 0.95;   % Inverter Efficiency
+
+%% Panel Specifications (PS410M3F-24/TH)
+P_panel = 410;    % Nominal power of the panel (Watts)
+Vmp = 41.42;      % Maximum power point voltage (Volts)
+Imp = 9.90;       % Maximum power point current (Amps)
+Voc = 49.92;      % Open-circuit voltage (Volts)
+Isc = 10.26;      % Short-circuit current (Amps)
+
+%% Calculate Total Required Panels
+P_total_needed = P_motor / efficiency_inverter;  % Total required power
+num_panels = ceil(P_total_needed / P_panel);     % Number of required panels
+
+%% String Configuration
+V_max_system = 1000;  % Maximum DC voltage limit for on-grid system
+V_min_mppt = 250;     % Minimum inverter MPPT voltage (Volts)
+V_max_mppt = 850;     % Maximum inverter MPPT voltage (Volts)
+
+% Maximum and minimum number of panels per string
+max_panels_per_string = floor(V_max_system / Voc);
+min_panels_per_string = ceil(V_min_mppt / Vmp);
+
+% Selected number of panels per string
+optimal_panels_per_string = min(max_panels_per_string, ...
+                                min_panels_per_string);
+
+%% Number of Strings
+num_strings = ceil(num_panels / optimal_panels_per_string);
+
+%% Total Current Calculation
+total_current = num_strings * Imp;  % Total DC output current (Amps)
+
+%% Print Results
+fprintf('Total Required Power: %.2f W\n', P_total_needed);
+fprintf('Total Required Panel Count: %d panels\n', num_panels);
+fprintf('Optimal Panels Per String: %d panels\n', ...
+        optimal_panels_per_string);
+fprintf('Required Number of Strings: %d\n', num_strings);
+fprintf('Total DC Output Current: %.2f A\n', total_current);
