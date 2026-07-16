@@ -112,8 +112,9 @@ If you use these materials, please cite both the associated manuscript and the Z
 
 ---
 
-# Author
+# Authors
 
+**Ceyhun Kapucu**
 **Altan Kalay**
 
 Muğla Sıtkı Koçman University
