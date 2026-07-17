@@ -1,150 +1,193 @@
-# Digital-Twin-PV-Grid-Water-Pumping
+# Digital Twin PV-Grid Water Pumping
 
-## Supporting Materials for the Manuscript
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21396014.svg)](https://doi.org/10.5281/zenodo.21396014)
 
-### Title
+Supporting data, source code, and documentation for the manuscript:
 
-**Digital Twin Modelling of PV-Grid Water Pumping Using NeuralProphet and MATLAB/Simulink**
+> **Digital Twin Modelling of PV-Grid Water Pumping Using NeuralProphet and MATLAB/Simulink**
 
-This repository provides the processed datasets, source codes, MATLAB/Simulink modelling files, NeuralProphet forecasting scripts, workflow documentation, and supporting materials associated with the manuscript submitted to **Digital Discovery (Royal Society of Chemistry)**.
-
----
-
-## Repository Contents
-
-| File / Folder | Description |
-|---|---|
-| `scada1.xlsx` | Processed SCADA dataset used for model development and validation |
-| `PV-Design-MATLABcode/` | MATLAB scripts and supporting files used for PV system modelling and analysis |
-| `NeuralProphet-Optuna/` | NeuralProphet forecasting and Optuna-based hyperparameter optimization files |
-| `demand_to_torque_workflow.svg.pdf` | Demand-to-Torque Transformation (DTT) workflow diagram |
-| `simulinkmodeltumsystem.pdf` | Overview of the MATLAB/Simulink digital twin model |
-| `matlabcurve1.fig` | MATLAB figure file |
-| `matlabcurve5.fig` | MATLAB figure file |
-| `matlabfib3.fig` | Supporting MATLAB figure file |
-| `matlabfig2.fig` | Supporting MATLAB figure file |
-| `README.md` | Repository documentation |
+Submitted to **Digital Discovery (Royal Society of Chemistry)**.
 
 ---
 
-## Study Overview
+# Overview
 
-This repository accompanies a digital twin framework developed for a PV-grid hybrid water pumping system.
+This repository provides the computational workflow, source code, processed dataset, and supporting documentation used for the development of a digital twin framework for a PV-grid water pumping system.
 
-The proposed methodology integrates:
+The proposed framework combines:
 
-- NeuralProphet-based motor energy demand forecasting
-- Optuna-based hyperparameter optimization
-- Demand-to-Torque Transformation (DTT)
+- NeuralProphet forecasting
+- Optuna hyperparameter optimization
 - MATLAB/Simulink digital twin modelling
-- Three-phase induction motor simulation
+- Demand-to-Torque (DTT) transformation
 - PV system modelling
-- Processed SCADA measurements for model development and validation
+- SCADA-based validation
 
-The repository is intended to support independent verification, reproducibility, and reuse of the computational workflow presented in the manuscript.
-
----
-
-## Computational Workflow
-
-The implemented workflow consists of the following stages:
-
-1. SCADA data preparation
-2. NeuralProphet model development
-3. Optuna-based hyperparameter optimization
-4. Hourly motor energy demand forecasting
-5. Demand-to-Torque Transformation
-6. MATLAB/Simulink digital twin simulation
-7. Performance evaluation
-8. Figure generation
+The repository is intended to improve transparency, reproducibility, and long-term accessibility of the research.
 
 ---
 
-## Software Requirements
+# Repository Contents
 
-### MATLAB Environment
+```
+Digital-Twin-PV-Grid-Water-Pumping
+│
+├── NeuralProphet-Optuna
+│      NeuralProphet forecasting and Optuna optimization source code
+│
+├── PV-Design-MATLABcode
+│      MATLAB scripts used for PV system design
+│
+├── scada1.xlsx
+│      Processed SCADA dataset
+│
+├── demand_to_torque_workflow.svg.pdf
+│      Demand-to-Torque (DTT) workflow
+│
+├── simulinkmodeltumsystem.pdf
+│      MATLAB/Simulink model documentation
+│
+├── matlabcurve1.fig
+├── matlabcurve5.fig
+├── matlabfig2.fig
+├── matlabfib3.fig
+│      MATLAB figure files
+│
+└── README.md
+```
+
+---
+
+# Methodology
+
+The proposed digital twin consists of the following workflow:
+
+SCADA Data
+
+↓
+
+NeuralProphet Forecasting
+
+↓
+
+Optuna Hyperparameter Optimization
+
+↓
+
+Demand-to-Torque (DTT) Transformation
+
+↓
+
+MATLAB/Simulink Digital Twin
+
+↓
+
+PV-Grid Water Pumping Simulation
+
+↓
+
+Performance Evaluation
+
+---
+
+# Repository Features
+
+- NeuralProphet forecasting model
+- Optuna hyperparameter optimization
+- MATLAB PV system design scripts
+- Demand-to-Torque transformation methodology
+- MATLAB figure files
+- Processed SCADA dataset
+- Simulink model documentation
+- Complete workflow documentation
+
+---
+
+# Software Requirements
+
+## MATLAB
 
 - MATLAB R2025b
 - Simulink
 - Simscape Electrical
 
-### Python Environment
+## Python
 
 - Python 3.x
 - NeuralProphet
 - Optuna
-
-Only the software and libraries explicitly associated with the deposited workflow are listed above.
+  
 
 ---
 
-## Repository Version
+# Repository Release
 
-**Current Release:** Version 1.0
+Current Release
 
-**Zenodo DOI:**  
-https://doi.org/10.5281/zenodo.21396015
+**Version 1.1**
 
-**GitHub Repository:**  
+Current Version DOI
+
+https://doi.org/10.5281/zenodo.21420528
+
+Concept DOI (always resolves to the latest version)
+
+https://doi.org/10.5281/zenodo.21396014
+
+GitHub Repository
+
 https://github.com/altankalay/Digital-Twin-PV-Grid-Water-Pumping
 
 ---
 
-## Data Availability
+# Citation
 
-The processed datasets, MATLAB scripts, NeuralProphet and Optuna files, workflow documentation, MATLAB figure files, and supporting materials deposited in this repository are openly available through GitHub and permanently archived on Zenodo.
+If you use this repository in your research, please cite the latest archived version through Zenodo.
 
-The repository contents correspond to the computational materials made available for the associated manuscript.
+**Concept DOI**
 
----
+https://doi.org/10.5281/zenodo.21396014
 
-## Reproducibility
+or cite the exact software version used:
 
-The repository provides the principal computational resources required to examine and reproduce the forecasting and simulation workflow reported in the manuscript, including:
+**Version 1.1**
 
-- Processed SCADA data
-- NeuralProphet forecasting files
-- Optuna optimization files
-- MATLAB scripts
-- PV system modelling files
-- Demand-to-Torque Transformation documentation
-- MATLAB/Simulink model documentation
-- Supporting MATLAB figures
-
-Users should verify local software compatibility, file paths, and model configuration before executing the workflow.
+https://doi.org/10.5281/zenodo.21420528
 
 ---
 
-## Citation
+# License
 
-If you use the data, code, workflow, or supporting materials in this repository, please cite both:
+This repository is provided for academic and research purposes.
 
-1. The associated manuscript
-2. The Zenodo archive
-
-### Repository Citation
-
-Kapucu, C., and Kalay, A.  
-**Digital Twin Modelling of PV-Grid Water Pumping Using NeuralProphet and MATLAB/Simulink.**  
-Version 1.0. Zenodo.  
-https://doi.org/10.5281/zenodo.21396015
-
-The full journal citation should be added after publication of the associated article.
+Please cite the associated manuscript and the Zenodo archive when using any part of this repository.
 
 ---
 
-## Authors
+# Acknowledgement
 
-**Ceyhun Kapucu**  
+The authors acknowledge the use of:
+
+- GitHub for version control
+- Zenodo for software archiving and DOI assignment
+- MATLAB/Simulink for digital twin modelling
+- NeuralProphet for time-series forecasting
+- Optuna for hyperparameter optimization
+
+---
+
+# Contact
+
 **Altan Kalay**
 
-Muğla Sıtkı Koçman University  
-Türkiye
+GitHub:
 
----
+https://github.com/altankalay
 
-## License
+Repository:
 
-No explicit software or data license is currently specified in this repository.
+https://github.com/altankalay/Digital-Twin-PV-Grid-Water-Pumping
 
-Reuse of the deposited materials should therefore be undertaken with appropriate citation and in accordance with the terms displayed on the corresponding Zenodo record.
+Zenodo:
+
+https://doi.org/10.5281/zenodo.21396014
