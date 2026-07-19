@@ -105,17 +105,20 @@ Performance Evaluation
 
 # Software Requirements
 
-## MATLAB
 
-- MATLAB R2025b
+- MATLAB==R2025b
 - Simulink
 - Simscape Electrical
-
-## Python
-
-- Python 3.x
-- NeuralProphet
-- Optuna
+- Python==3.11.9
+- NeuralProphet==0.9.0
+- matplotlib==3.11.1
+- numpy==2.5.1
+- optuna==4.4.0
+- pandas==3.0.3
+- pvlib==0.13.0
+- pytz==2025.2
+- scikit_learn==1.9.0
+- scipy==1.18.0
   
 
 ---
